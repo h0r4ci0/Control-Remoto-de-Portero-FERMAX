@@ -5,7 +5,7 @@ La finalidad de este proyecto es abrir la puerta del patio utilizando un portero
 
 Si tienes un videoportero de FERMAX, sabrás que si mantienes pulsado el botón de la cámara, tendrás una imagen en vivo de lo que sucede en el portal. Ahora bien, mientras la cámara esté activada, si pulsas sobre el botón de la llave, la puerta del patio se desbloquea y seguidamente se lanza el siguiente aviso: "puerta abierta. Por favor, cierre después de entrar".
 
-Por lo tanto, ¿y si replicamos este proceso?
+Esto me llevó a pensar: ¿y si replicamos este proceso sin necesidad de tener nosotros que pulsar los botones?
 
 ## Electrónica.
 
