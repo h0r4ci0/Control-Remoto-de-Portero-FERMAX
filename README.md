@@ -1,3 +1,5 @@
+![banner](img/banner.jpg)
+
 # Control Remoto de Portero FERMAX con el ESP32.
 
 La finalidad de este proyecto es abrir la puerta del patio utilizando un portero de la marca FERMAX y la placa ESP32.
