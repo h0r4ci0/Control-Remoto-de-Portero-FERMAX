@@ -28,4 +28,7 @@ El ESP32 tiene la capacidad de correr un servidor web, por ello, he creado una p
 10. Esperar 500ms.
 11. Desactivar LED y relé de la cámara.
 
+> [!NOTE]
+> Cuando hablo del LED, me refiero al LED que viene integrado en el ESP32.
+
 Hay que tener en cuenta una cosa, y es que cuando desactivamos el relé de la cámara (que es lo mismo que dejar de pulsar el botón de la cámara), la cámara no se apaga hasta pasados unos segundos o hasta que se vuelva a pulsar el botón. Por ello, en la acción número 9 se vuelve a activar el relé de la cámara. Que como hemos dicho, esto hará que se apague la cámara ya que previamente estaba encendida.
