@@ -10,7 +10,7 @@
 #include <WiFi.h>
 
 #define relayVIDEO 4
-#define relayDOOR 15
+#define relayDOOR 5
 #define led 2
 #define sleep 2500
 #define wait 500
