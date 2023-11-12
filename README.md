@@ -9,6 +9,8 @@ Esto me llevó a pensar: ¿y si replicamos este proceso sin necesidad de tener n
 
 ## Electrónica.
 
+![schematics](img/Schematic_bb.jpg)
+
 ## ESP32.
 
 El ESP32 tiene la capacidad de correr un servidor web, por ello, he creado una pequeña página web con un botón que dice: "Abrir la puerta". Cuando se pulsa este botón, el ESP32 realiza las siguientes acciones:
