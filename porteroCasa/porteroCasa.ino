@@ -8,6 +8,7 @@
 */
 
 #include <WiFi.h>
+#include <HTTPClient.h>
 
 #define relayVIDEO 4
 #define relayDOOR 5
@@ -16,7 +17,8 @@
 #define wait 500
 
 const char* ssid = "SSID";
-const char* password = "passowrd";
+const char* password = "password";
+const char* ntfyServer = "http://[ntfy_IP]/doorBell";
 
 WiFiServer server(80);
 
@@ -89,6 +91,7 @@ void loop() {
           delay(wait);
           digitalWrite(relayVIDEO, 1);
           digitalWrite(led, 0);
+          ntfyNotify("Door open");
         }
       }
     }
@@ -114,4 +117,15 @@ void connectToWiFi() {
   Serial.println("WiFi connected.");
   Serial.print("Dirección IP: ");
   Serial.println(WiFi.localIP());
+  ntfyNotify("Door Bell connected to WiFi");
+
+}
+
+// Send a notification to the server
+void ntfyNotify(const char* ntfyMessage) {
+  HTTPClient http;
+  http.begin(ntfyServer); // starts the HTTP connection
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // header content type
+  int httpResponseCode = http.POST(ntfyMessage); // send the request
+  http.end();
 }
